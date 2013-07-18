@@ -1,0 +1,242 @@
+@import url('../standard/style.css');
+
+@import url('../standard/css/theme-responsive.css');
+/*
+Theme Name: Crimson Child Theme
+Theme URI: https://github.com/eightbit/standard-child-themes/tree/master/crimson
+Version: 3.1.2
+Description: This is a custom child theme for Standard 3.
+Author: Jason Bradley
+Author URI: http://everchangingmedia.com
+Author Email: jason.bradley@me.com
+License: GNU General Public License v3.0 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: standard
+*/
+/* Import Standard Styles
+---------------------------------------------------------------------------------- */
+/* Customizations
+---------------------------------------------------------------------------------- */
+/* Body */
+body {
+  background: #ffffff;
+}
+a {
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  color: #da363c;
+}
+a:hover {
+  color: #bb2228;
+  text-decoration: none;
+}
+#wrapper {
+  padding: 20px 0 0;
+}
+#wrapper .container {
+  background: #e0e0e0;
+  border-top: 10px solid #efefef;
+  border-left: 10px solid #efefef;
+  border-right: 10px solid #efefef;
+  padding: 20px 20px 0 20px;
+}
+/* Header */
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+  color: #da363c;
+}
+/* Navigation */
+#menu-above-header.navbar .nav > li > a {
+  border-top: 2px solid transparent;
+}
+#menu-above-header.navbar .nav > li > a:hover {
+  color: #da363c;
+}
+#menu-above-header.navbar .nav > .active > a {
+  border-top: 2px solid #da363c;
+}
+#menu-above-header.navbar .nav > .active > a:hover {
+  border-top: 2px solid #da363c;
+}
+#menu-category .navbar-inner {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-top: -10px;
+  border: none;
+}
+#menu-category .navbar-inner .container {
+  background: transparent;
+  border: none;
+  padding: 10px 20px 20px 20px;
+}
+#menu-category .navbar-inner,
+#menu-category .navbar .fill {
+  background-color: transparent;
+  background-image: none;
+}
+#menu-category .navbar .btn-navbar {
+  margin-left: 0px;
+}
+#menu-category.navbar .nav > li > a {
+  background: #000000;
+  color: #ffffff;
+  text-shadow: none;
+  padding: 10px;
+  margin-left: 10px;
+}
+#menu-category.navbar .nav > li > a:hover {
+  background: #da363c;
+  text-decoration: none;
+}
+#menu-category.navbar .nav > .active > a {
+  background: #da363c;
+  text-decoration: none;
+}
+#menu-category.navbar .nav > .active > a:hover {
+  background: #da363c;
+}
+.pager {
+  background: #000000;
+}
+.pager li > a,
+.pager li > span {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background: #000000;
+  border: 1px solid #000000;
+}
+.pager li > a:hover,
+.pager li > span:hover {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background: #da363c;
+  border: 1px solid #da363c;
+  color: #ffffff;
+}
+.pager a:hover,
+.previous-page a:hover,
+.next-page a:hover {
+  color: #ffffff;
+}
+/* Posts */
+.post-title a:hover,
+.post-title a:active {
+  color: #da363c;
+}
+/* Post Format Quote */
+.post.format-quote .post-header {
+  background-color: #da363c;
+  color: #ffffff;
+}
+/* Post Format Link */
+.post.format-link .post-title a:hover {
+  color: #da363c;
+}
+/* Sidebar */
+/* Widgets */
+.widget ul li a:hover {
+  color: #da363c;
+  text-decoration: none;
+}
+/* Footer */
+#footer {
+  background: none;
+}
+#footer #footer-widgets {
+  padding-top: 0;
+}
+#footer #footer-widgets .container {
+  background: #efefef;
+  padding: 20px 30px 0;
+}
+#footer #sub-floor {
+  background: none;
+}
+#footer #sub-floor .navbar .nav > li > a {
+  color: #000000;
+  text-shadow: none;
+}
+#footer #sub-floor .navbar .nav > li > a:hover {
+  color: #da363c;
+}
+#footer #sub-floor .navbar .nav > .active > a {
+  background: none;
+}
+#footer #sub-floor #credit {
+  color: #000000;
+}
+#footer #sub-floor #credit a {
+  color: #454545;
+}
+#footer #sub-floor #credit a:hover {
+  color: #da363c;
+}
+input:focus,
+textarea:focus {
+  border-color: rgba(218, 54, 60, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(218, 54, 60, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(218, 54, 60, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(218, 54, 60, 0.6);
+}
+.cse input.gsc-search-button,
+input.gsc-search-button {
+  border-color: #da363c !important;
+  background-color: #da363c !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#da363c), to(#d0262d)) !important;
+  background-image: -webkit-linear-gradient(top, #da363c, #d0262d) !important;
+  background-image: -moz-linear-gradient(top, #da363c, #d0262d) !important;
+  background-image: -o-linear-gradient(top, #da363c, #d0262d) !important;
+  background-image: -ms-linear-gradient(top, #da363c, #d0262d) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='@startColor', EndColorStr='@endColor') !important;
+}
+.cse input.gsc-search-button:hover,
+input.gsc-search-button:hover {
+  background-color: #d0262d !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d0262d), to(#bb2228)) !important;
+  background-image: -webkit-linear-gradient(top, #d0262d, #bb2228) !important;
+  background-image: -moz-linear-gradient(top, #d0262d, #bb2228) !important;
+  background-image: -o-linear-gradient(top, #d0262d, #bb2228) !important;
+  background-image: -ms-linear-gradient(top, #d0262d, #bb2228) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='@startColor', EndColorStr='@endColor') !important;
+}
+.gsc-search-box .gsc-input > input:focus,
+.gsc-input-box-focus {
+  border-color: #da363c !important;
+}
+.tabbed-widget .nav-tabs > li > a:hover {
+  color: #da363c !important;
+}
+.tabbed-widget .tab-content ul li a:hover {
+  text-decoration: none !important;
+}
+/* Media Queries
+---------------------------------------------------------------------------------- */
+/* Smartphones */
+@media (max-width: 480px) {
+
+}
+/* Tablet & Mobile */
+@media (max-width: 979px) {
+
+}
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+
+}
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+/* Desktop */
+@media (min-width: 980px) {
+
+}

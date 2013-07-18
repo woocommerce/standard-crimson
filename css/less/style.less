@@ -1,0 +1,435 @@
+/*  
+Theme Name: Crimson Child Theme
+Theme URI: https://github.com/eightbit/standard-child-themes/tree/master/crimson
+Version: 3.1.2
+Description: This is a custom child theme for Standard 3.
+Author: Jason Bradley
+Author URI: http://everchangingmedia.com
+Author Email: jason.bradley@me.com
+License: GNU General Public License v3.0 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: standard
+*/
+
+/* Import Standard Styles
+---------------------------------------------------------------------------------- */
+
+@import url( '../../standard/style.css' );
+@import url( '../../standard/css/theme-responsive.css' );
+
+/* Customizations
+---------------------------------------------------------------------------------- */
+
+// Variables
+
+// Colors
+@black: #000;
+@white: #FFF;
+
+@gray: #999;
+@grayLight: #E0E0E0;
+@grayLighter: #EFEFEF;
+@grayLightest: #E9E9E9;
+@grayDark: #999;
+@grayDarker: #454545;
+@grayDarkest: #202020;
+
+@red: #da363c;
+@redDark: darken(@red, 10%);
+
+// Red RGB
+@redr: 218;
+@redg: 54;
+@redb: 60;
+
+// Body
+@bodyBackgroundColor: @white;
+@linkColor: @red;
+@linkColorHover: @redDark;
+
+// Header
+@siteTitleColor: @black;
+@siteTitleColorHover: @red;
+@siteDescriptionColor: @grayDarker;
+
+// Navigation
+
+@menuAboveHeaderBackgroundColor: @black;
+@menuAboveHeaderBackgroundColorGradientTop: @black;
+@menuAboveHeaderBackgroundColorGradientBottom: @black;
+@menuAboveHeaderLinkColor: @gray;
+@menuAboveHeaderLinkColorHover: @red;
+@menuAboveHeaderLinkColorActive: @white;
+@menuAboveHeaderLinkColorActiveHover: @menuAboveHeaderLinkColorActive;
+@menuAboveHeaderBackgroundColorActive: @black;
+
+@menuUnderHeaderBackgroundColor: @black;
+@menuUnderHeaderBackgroundColorGradientTop: @black;
+@menuUnderHeaderBackgroundColorGradientBottom: @black;
+@menuUnderHeaderLinkColor: @gray;
+@menuUnderHeaderLinkColorHover: @white;
+@menuUnderHeaderLinkColorActive: @white;
+@menuUnderHeaderLinkColorActiveHover: @menuUnderHeaderLinkColorActive;
+@menuUnderHeaderBackgroundColorActive: @black;
+
+@menuCategoryBackgroundColor: @black;
+@menuCategoryBackgroundColorGradientTop: @black;
+@menuCategoryBackgroundColorGradientBottom: @black;
+@menuCategoryLinkColor: @white;
+@menuCategoryLinkBackgroundColor: @black;
+@menuCategoryLinkBackgroundColorHover: @red;
+@menuCategoryLinkColorHover: @red;
+@menuCategoryLinkColorActive: @white;
+@menuCategoryLinkColorActiveHover: @menuCategoryLinkColorActive;
+@menuCategoryLinkBackgroundColorActive: @menuCategoryLinkBackgroundColorHover;
+@menuCategoryLinkBackgroundColorActiveHover: @menuCategoryLinkBackgroundColorHover;
+@menuCategoryBackgroundColorActive: @black;
+
+@menuSubFloorLinkColor: @gray;
+@menuSubFloorLinkColorHover: @white;
+@menuSubFloorLinkColorActive: @white;
+@menuSubFloorLinkColorActiveHover: @white;
+
+@pagerBackgroundColor: @black;
+@pagerNextPrevBackgroundColor: @red;
+@pagerNextPrevLinkColor: @white;
+
+// Content
+@wrapperContainerBackgroundColor: @grayLight;
+@wrapperContainerBorderColor: @grayLighter;
+
+// Post
+@postTitleColor: @black;
+@postTitleColorHover: @red;
+
+// Post Format Quote
+@postFormatQuoteBackgroundColor: @red;
+@postFormatQuoteContentColor: @white;
+
+// Post Format Link
+@postFormatLinkPostTitleColor: @white;
+@postFormatLinkPostTitleColorHover: @red;
+
+// Author Box
+
+// Comments
+
+// Page
+
+// Sidebar
+
+// Widgets
+@widgetListItemColor: @grayDark;
+@widgetListItemColorHover: @red;
+
+// Activity Tabs Widget
+@activityTabsLinkColorHover: @red;
+
+@cgsSearchButtonBorderColor: @red;
+@cgsSearchButtonTopColor: @red;
+@cgsSearchButtonBottomColor: darken(@red, 5%);
+@cgsSearchButtonTopColorHover: darken(@red, 5%);
+@cgsSearchButtonBottomColorHover: darken(@red, 10%);
+@cgsInputBoxBorderColor: @red;
+
+// Footer
+@footerWidgetsBackgroundColor: @grayLighter;
+
+@subFloorBackgroundColor: @grayDark;
+@subFloorFooterMenuLinkColor: @black;
+@subFloorFooterMenuLinkColorHover: @red;
+
+@creditTextColor: @black;
+@creditLinkColor: @grayDarker;
+@creditLinkColorHover: @red;
+
+
+/* Body */
+
+body {
+	background: @bodyBackgroundColor;
+}
+
+a {
+	transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+	color: @linkColor;
+	&:hover {
+		color: @linkColorHover;
+		text-decoration: none;
+	}
+}
+
+#wrapper {
+	padding: 20px 0 0;
+	.container {
+		background: @wrapperContainerBackgroundColor;
+		border-top: 10px solid @wrapperContainerBorderColor;
+		border-left: 10px solid @wrapperContainerBorderColor;
+		border-right: 10px solid @wrapperContainerBorderColor;
+		padding: 20px 20px 0 20px;
+	}
+}
+/* Header */
+
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+	color: @siteTitleColorHover;
+}
+
+/* Navigation */
+
+#menu-above-header {
+	&.navbar .nav {
+		> li > a {
+			border-top: 2px solid transparent;
+			&:hover {
+				color: @menuAboveHeaderLinkColorHover;
+			}
+		}
+		> .active > a {
+			border-top: 2px solid @red;			
+			&:hover {
+				border-top: 2px solid @red;
+			}
+		}
+	}
+}
+
+#menu-category {
+	.navbar-inner {
+		.no-shadow();
+		margin-top: -10px;
+		border: none;
+	    .container {
+			background: transparent;
+		    border: none;
+		    padding: 10px 20px 20px 20px;
+		}
+	}
+	.navbar-inner, .navbar .fill {
+		background-color: transparent;
+		background-image: none;
+	}
+	.navbar .btn-navbar {
+		margin-left: 0px;
+	}
+	&.navbar .nav {
+		> li > a {
+			background: @menuCategoryLinkBackgroundColor;
+			color: @menuCategoryLinkColor;
+			text-shadow: none;
+			padding: 10px;
+			&:hover {
+				background: @menuCategoryLinkBackgroundColorHover;
+				text-decoration: none;
+			}
+			margin-left: 10px;
+		}
+		> .active > a {
+			background: @menuCategoryLinkBackgroundColorActive;
+			text-decoration: none;
+			&:hover {
+				background: @menuCategoryLinkBackgroundColorActiveHover;
+			}
+		}
+	}
+}
+
+.pager {
+	background: @pagerBackgroundColor;
+}
+
+.pager li {
+	> a, > span {
+		.rounded-corners(0px);
+		background: @pagerBackgroundColor;
+		border: 1px solid @pagerBackgroundColor;
+		&:hover {
+			.rounded-corners(0px);
+			background: @pagerNextPrevBackgroundColor;
+			border: 1px solid @pagerNextPrevBackgroundColor;
+			color: @pagerNextPrevLinkColor;
+		}
+	}
+}
+
+.pager, .previous-page, .next-page {
+	a {
+		&:hover {
+			color: @pagerNextPrevLinkColor;
+		}
+	}
+}
+
+/* Posts */
+
+.post-title a:hover, .post-title a:active {
+	color: @postTitleColorHover;
+}
+
+/* Post Format Quote */
+
+.post.format-quote .post-header {
+	background-color: @postFormatQuoteBackgroundColor;
+	color: @postFormatQuoteContentColor;
+}
+
+/* Post Format Link */
+.post.format-link .post-title a:hover {
+	color: @postFormatLinkPostTitleColorHover;
+}
+
+/* Sidebar */
+
+/* Widgets */
+
+.widget {
+	ul {
+		li {
+			a {
+				&:hover {
+					color: @widgetListItemColorHover;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/* Footer */
+
+#footer {
+	background: none;
+	#footer-widgets {
+		padding-top: 0;
+		.container {
+			background: @footerWidgetsBackgroundColor;
+			padding: 20px 30px 0;
+		}
+	}
+	#sub-floor {
+		background: none;
+		.navbar .nav {
+			> li > a {
+				color: @subFloorFooterMenuLinkColor;
+				text-shadow: none;
+				&:hover {
+					color: @subFloorFooterMenuLinkColorHover;
+				}
+			}
+			> .active > a {
+				background: none;
+			}
+		}
+		#credit {
+			color: @creditTextColor;
+			a {
+				color: @creditLinkColor;
+				&:hover {
+					color: @creditLinkColorHover;
+				}
+			}
+		}
+	}
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(@redr, @redg, @redb, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(@redr, @redg, @redb, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(@redr, @redg, @redb, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(@redr, @redg, @redb, 0.6);
+}
+
+.cse input.gsc-search-button, input.gsc-search-button {
+	border-color: @cgsSearchButtonBorderColor !important;
+	#gradient.vertical(@cgsSearchButtonTopColor, @cgsSearchButtonBottomColor) !important;
+	&:hover {
+		#gradient.vertical(@cgsSearchButtonTopColorHover, @cgsSearchButtonBottomColorHover) !important;
+	}
+}
+
+.gsc-search-box .gsc-input>input:focus,
+.gsc-input-box-focus {
+  border-color: @cgsInputBoxBorderColor !important;
+}
+
+.tabbed-widget .nav-tabs > li > a:hover {
+	color: @activityTabsLinkColorHover !important;
+}
+
+.tabbed-widget .tab-content ul li a:hover {
+	text-decoration: none !important;
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------- */
+
+/* Smartphones */
+@media (max-width: 480px) {
+
+}
+
+/* Tablet & Mobile */
+@media (max-width: 979px) {	
+			
+}
+
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+	
+}
+
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+	
+}
+
+// Mixins
+
+#gradient {
+	.vertical(@startColor: @grayLight, @endColor: @gray) {
+		background-color: @startColor;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+		background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+		background-image: -moz-linear-gradient(top, @startColor, @endColor);
+		background-image: -o-linear-gradient(top, @startColor, @endColor);
+		background-image: -ms-linear-gradient(top, @startColor, @endColor);
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='@startColor', EndColorStr='@endColor');
+	} 
+	.horizontal(@startColor: @grayLight, @endColor: @gray) {
+		background-color: @startColor;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+		background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+		background-image: -moz-linear-gradient(top, @startColor, @endColor);
+		background-image: -o-linear-gradient(top, @startColor, @endColor);
+		background-image: -ms-linear-gradient(top, @startColor, @endColor);
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='@startColor', EndColorStr='@endColor');
+	}
+}
+
+.rounded-corners(@radius: 4px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.no-shadow() {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
